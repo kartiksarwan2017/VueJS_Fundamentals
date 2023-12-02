@@ -1,13 +1,13 @@
 <template>
   <div>
-     <h1>Hare Krishna!</h1>
+     <h1>H!</h1>
      <TodoList />
   </div>
 </template>
 
 
 <script>
- import TodoList from "./components/ToDoList.vue";
+ import TodoList from "./components/ToDoList";
  export default {
   name: "App",
   components: {
