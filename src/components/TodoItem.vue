@@ -1,11 +1,14 @@
 <template>
     <li class="d-flex align-items-center list-group-item">
-      <button class="btn border-0 text-left flex-grow-1">{{todoString}}</button>
+      <button 
+      :class="{completed}"
+      @click="$emit('on-toggle')"
+      class="btn border-0 text-left flex-grow-1">{{todoString}}</button>
       <form class="flex-grow-1">
         <input type="text" class="form-control" />
       </form>
-      <button class="btn btn-outline-primary">Edit</button>
-      <button class="btn btn-outline-danger">Delete</button>
+      <button  class="btn btn-outline-primary">Edit</button>
+      <button @click="$emit('on-delete')" class="btn btn-outline-danger">Delete</button>
     </li>
 </template>
 

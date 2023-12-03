@@ -16,6 +16,9 @@
             :key="index"
             :todoString="todo.todoString"
             :completed="todo.completed"
+            @on-delete="deleteTodo(todo)"
+            @on-toggle="toggleTodo(todo)"
+            @on-edit="editTodo(todo, $event)"
           />
         </ul>
       </div>
@@ -60,5 +63,9 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+  .list{
+    background-color: white;
+    padding: 20px;
+  }
 </style>
