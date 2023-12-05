@@ -6,7 +6,9 @@
       </div>
     </div>
     <div class="row">
-      <p>Add create form</p>
+      <div class="col-12 col-lg-6"> 
+       <NewTodo @on-addtodo="addTodo($event)" />
+      </div>
     </div>
     <div class="row">
       <div class="col-12 col-lg-6">
@@ -28,10 +30,13 @@
 
 <script>
 import TodoItem from "./TodoItem";
+import NewTodo from "./NewTodo.vue";
 export default {
   name: "TodoList",
   components: {
     TodoItem,
+    NewTodo
+    
   },
   data() {
     return {
